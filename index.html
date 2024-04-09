@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random URL in iframe</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Fjerner eventuel scroll */
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none; /* Fjerner ramme omkring iframe */
+    }
+  </style>
+</head>
+<body>
+  <iframe id="randomIframe" frameborder="0"></iframe>
+
+  <script>
+    // Array of URLs to choose from
+    const urls = [
+      'https://a-jackyl.github.io/infoBoardGruppe5/',
+      'https://infoboardtechcollege.netlify.app',
+	  'https://infoboard2024.netlify.app/'
+    ];
+
+    // Function to select a random URL from the array
+    function getRandomURL() {
+      const randomIndex = Math.floor(Math.random() * urls.length);
+      return urls[randomIndex];
+    }
+
+    // Function to set the src attribute of the iframe with a random URL
+    function displayRandomURL() {
+      const iframe = document.getElementById('randomIframe');
+      const randomURL = getRandomURL();
+      iframe.src = randomURL;
+	  setTimeout(displayRandomURL, 10000);
+    }
+
+    // Call the function initially to display a random URL
+    displayRandomURL();
+  </script>
+</body>
+</html>
