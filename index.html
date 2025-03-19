@@ -35,8 +35,8 @@
     */
 
     const urls = [
-      //'https://rad-centaur-0b72c7.netlify.app/',
-      'https://info-tavle.netlify.app',
+      'https://rad-centaur-0b72c7.netlify.app/',
+      //'https://info-tavle.netlify.app',
 	    'https://transcendent-toffee-145675.netlify.app/'
     ];
 
@@ -58,7 +58,7 @@
       const iframe = document.getElementById('randomIframe');
       const randomURL = getRandomURL();
       iframe.src = randomURL;
-  	  setTimeout(displayRandomURL, minuteInSeconds*1000);
+  	  setTimeout(displayRandomURL, shortInSeconds*1000);
     }
 
     // Call the function initially to display a random URL
