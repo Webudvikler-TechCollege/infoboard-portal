@@ -38,11 +38,13 @@
     */
 
     const urls = [
-      'https://techcollegedashboard.netlify.app/'
+      'https://techcollegedashboard.netlify.app/', // Simon, Matthias
+      'https://zingy-sfogliatella-6c9727.netlify.app/' // Lucas, Victoriia, Jacob, Søren
     ];
 
     const shortInSeconds = 10
     const minuteInSeconds = 60
+    const fiveInSeconds = (5 * minuteInSeconds)
     const hourInSeconds = 3600
     const dayInSeconds = 86400
     const weekInSeconds = 604800
@@ -59,7 +61,7 @@
       const iframe = document.getElementById('randomIframe');
       const randomURL = getRandomURL();
       iframe.src = randomURL;
-  	  setTimeout(displayRandomURL, hourInSeconds*1000);
+  	  setTimeout(displayRandomURL, fiveInSeconds*1000);
     }
 
     // Call the function initially to display a random URL
